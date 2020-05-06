@@ -2,7 +2,7 @@ import yaml
 from openpyxl import load_workbook, Workbook
 
 
-excel_source = load_workbook('../source.xlsx')
+excel_source = load_workbook('source.xlsx')
 cols = [0,2,1,3]
 for shit in excel_source.sheetnames:
     vals = []
@@ -38,5 +38,5 @@ for shit in excel_source.sheetnames:
                  ])
         hate_you.append(yaml.safe_load(yaml.serialize(dont_eat_cheese_its_yuky)))
 
-    with open(shit + '.yaml', 'w+') as file:
+    with open(f'done/{shit}.yaml', 'w+') as file:
         documents = yaml.dump(hate_you, file, explicit_start=True)
