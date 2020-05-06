@@ -18,7 +18,7 @@ for shit in excel_source.sheetnames:
 
     hate_you = []
     for d in vals[1:]:
-
+        #
         # if d[2] == '@':
         #     name_value = ''
         # else:
@@ -40,4 +40,4 @@ for shit in excel_source.sheetnames:
         hate_you.append(yaml.safe_load(yaml.serialize(dont_eat_cheese_its_yuky)))
 
     with open(f'done/{shit}.yaml', 'w+') as file:
-        documents = yaml.dump(hate_you, file, explicit_start=True)
+        documents = yaml.dump(hate_you, file, explicit_start=True, width=float("inf"))
