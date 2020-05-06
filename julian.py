@@ -19,15 +19,16 @@ for shit in excel_source.sheetnames:
     hate_you = []
     for d in vals[1:]:
 
-        if d[2] == '@':
-            name_value = ''
-        else:
-            name_value = d[2]
+        # if d[2] == '@':
+        #     name_value = ''
+        # else:
+        #     name_value = d[2]
 
         dont_eat_cheese_its_yuky = yaml.MappingNode(
             tag='tag:yaml.org,2002:map',
             value=[
-                (yaml.ScalarNode(tag='tag:yaml.org,2002:str', value=name_value),
+                (yaml.ScalarNode(tag='tag:yaml.org,2002:str', value=d[2]),
+                # (yaml.ScalarNode(tag='tag:yaml.org,2002:str', value=name_value),
                  yaml.MappingNode(tag='tag:yaml.org,2002:map', value=[
                     (yaml.ScalarNode(tag='tag:yaml.org,2002:str', value='type'),
                      yaml.ScalarNode(tag='tag:yaml.org,2002:str', value=d[1])),
